@@ -108,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 
 catkin_package(
-#  INCLUDE_DIRS include
+  #INCLUDE_DIRS include
 #  LIBRARIES APC22
   CATKIN_DEPENDS rospy std_msgs nav_msgs message_runtime #shell_av_ros_msgs
 #  DEPENDS system_lib
@@ -201,6 +201,10 @@ include_directories(
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
  )
 
+ install(DIRECTORY
+  launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch/
+)
 #############
 ## Testing ##
 #############
