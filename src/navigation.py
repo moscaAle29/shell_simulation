@@ -106,7 +106,7 @@ def quaternion_to_euler_angle_vectorized1(w, x, y, z):
 
 def odometry_direction(start,end, heading): #define an angle that represents the direction to the next gpx point
     global target, prev_angle
-    dist_threshold=5#max distance to check the target  [m]
+    dist_threshold=9#max distance to check the target  [m]
     reached=False
     x_c=start[0] #current latitude in radians
     x_t=end[0] #target latitude in radians
@@ -134,6 +134,7 @@ def odometry_direction(start,end, heading): #define an angle that represents the
         steer_angle = 180
     elif steer_angle < -180:
         steer_angle = -180
+        
     print(heading_angle)
     print(direction_angle)
     print(steer_angle)
