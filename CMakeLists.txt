@@ -197,7 +197,7 @@ include_directories(
    # myfile1
    # myfile2
 
-   src/shell_simulation.launch
+   launch/shell_simulation.launch
    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
  )
 
