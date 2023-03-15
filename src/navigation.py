@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import pandas as pd
 import rospy
 import math
@@ -225,6 +226,7 @@ if __name__ == '__main__':
     xy_list=[]#coordinates of the points we have to go through
     waypoint_counter=0#keeps track of what waypoint_counter we reached
     path=rp.get_path('shell_simulation')
+    print(path)
     #read from CSV files
     points=pd.read_csv(path+"/src/points.csv", index_col=False)#all the 40 possible waypoints
     waypoints=pd.read_csv(path+"/src/waypoints.csv",index_col=0)#all the waypoints for pathplanning
