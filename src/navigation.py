@@ -8,7 +8,7 @@ import numpy as np
 import ast
 from rospkg import RosPack
 
-#from shell_av_ros_msgs import Score
+#from shell_av_ros_msgs.msg import Score
 from shell_simulation.msg import Score
 
 def add_dummy_node(graph):
