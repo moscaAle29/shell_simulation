@@ -167,7 +167,6 @@ include_directories(
  catkin_install_python(PROGRAMS
    src/navigation.py
    src/send_control_cmd_test.py
-   src/score.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 

@@ -2,16 +2,19 @@
 <node pkg="shell_simulation"
   name="shell_simulation_node"
   type="navigation.py"
-  output='screen'
-  />
+  launch-prefix="bash -c 'sleep 1.0; $0 $@'"
+  output="screen"
+/>
+<!-- Shift into gear! -->
+<node name="gear_shift"
+      pkg="rostopic"
+      type="rostopic"
+      args="pub /gear_command std_msgs/String '{data: forward}'"
+/>
 <node pkg="shell_simulation"
-  name="steering_cmd"
-  type="send_control_cmd_test.py"
-  />
-<node pkg="shell_simulation"
-  name="score_simulation"
-  type="score.py"
-  output='screen'
-  />
-
+      name="shell_simusteering_cmdlation_node"
+      type="send_control_cmd_test.py"
+      launch-prefix="bash -c 'sleep 1.0; $0 $@'"
+      output="screen"
+/>
 </launch>
